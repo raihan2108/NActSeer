@@ -1,0 +1,30 @@
+---
+log_level: INFO
+log_dir: logs
+model_name: netact   #lstm  #netact  sasrec caser svm bpr
+save_dir: saved_models
+is_load: false
+data:
+  batch_size: 32
+  dataset_dir: data/gowalla_dense  # flickr flixster gowalla memes digg  flickr_dense
+  test_batch_size: 32
+  graph_file_name: graph.txt
+  dataset_name: user_activity.txt
+  ids_file_name: all_ids.pkl
+model:
+  emb_size: 64
+  state_size: 64
+  context_size: 1
+  use_attn: false
+  dropout: 0.3   # flixster:1.0
+  normalize: true   # flixster:false
+  max_diff: 1
+  n_samples: 200
+  comb: add
+train:
+  base_lr: 0.001
+  n_epochs: 100
+  min_learning_rate: 2.0e-06
+  optimizer: adam
+  test_interval: 1
+  use_cuda: false
