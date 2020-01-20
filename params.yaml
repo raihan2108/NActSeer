@@ -1,12 +1,12 @@
 ---
 log_level: INFO
 log_dir: logs
-model_name: netact   #lstm  #netact  sasrec caser svm bpr
+model_name: netact  
 save_dir: saved_models
 is_load: false
 data:
   batch_size: 32
-  dataset_dir: data/gowalla_dense  # flickr flixster gowalla memes digg  flickr_dense
+  dataset_dir: data/kaggle
   test_batch_size: 32
   graph_file_name: graph.txt
   dataset_name: user_activity.txt
